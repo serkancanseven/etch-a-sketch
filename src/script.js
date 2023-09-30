@@ -11,8 +11,13 @@ function addBoxes(boxCount) {
       div.style.height = boxSize;
       div.style.border = "1px solid gray";
       container.appendChild(div);
+      div.addEventListener("mouseenter", (e) => fillBox(e));
     }
   }
+}
+
+function fillBox(event) {
+  event.target.style.backgroundColor = "black";
 }
 
 let boxCount = +prompt("How many boxes do you want?");
