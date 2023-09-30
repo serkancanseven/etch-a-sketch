@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const boardSize = 960;
+const boardSize = 720;
 
 function addBoxes(boxCount) {
   for (let i = 0; i < boxCount; i++) {
