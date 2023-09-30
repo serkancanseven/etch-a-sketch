@@ -13,4 +13,9 @@ function addBoxes(boxCount) {
   }
 }
 
-addBoxes(16);
+let boxCount = +prompt("How many boxes do you want?");
+if (boxCount > 64) {
+  alert("You may only enter a number up to 64!");
+  boxCount = +prompt("How many boxes do you want?");
+}
+addBoxes(boxCount);

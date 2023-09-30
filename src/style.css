@@ -13,4 +13,5 @@ html {
   display: flex;
   flex-wrap: wrap;
   max-width: 960px;
+  border: 1px solid gray;
 }
