@@ -1,5 +1,7 @@
 const container = document.querySelector(".container");
 const boardSize = 720;
+const button = document.querySelector(".change");
+button.addEventListener("click", changeBoxSize);
 
 function addBoxes(boxCount) {
   const boxSize = boardSize / boxCount + "px";
@@ -16,13 +18,18 @@ function addBoxes(boxCount) {
   }
 }
 
+function changeBoxSize() {
+  let boxCount = +prompt("How many boxes do you want?");
+  if (boxCount > 64) {
+    alert("You may only enter a number up to 64!");
+    boxCount = +prompt("How many boxes do you want?");
+  }
+  if (container.firstElementChild) {
+    container.replaceChildren();
+  }
+  addBoxes(boxCount);
+}
+
 function fillBox(event) {
   event.target.style.backgroundColor = "black";
 }
-
-let boxCount = +prompt("How many boxes do you want?");
-if (boxCount > 64) {
-  alert("You may only enter a number up to 64!");
-  boxCount = +prompt("How many boxes do you want?");
-}
-addBoxes(boxCount);
