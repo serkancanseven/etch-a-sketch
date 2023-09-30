@@ -1,4 +1,8 @@
 html {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   box-sizing: border-box;
 }
 
@@ -11,6 +15,7 @@ html {
 .container {
   margin: auto;
   display: flex;
+  height: inherit;
   flex-wrap: wrap;
   max-width: 722px;
   border: 1px solid gray;
