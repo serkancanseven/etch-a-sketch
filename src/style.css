@@ -12,6 +12,6 @@ html {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  max-width: 960px;
+  max-width: 962px;
   border: 1px solid gray;
 }
