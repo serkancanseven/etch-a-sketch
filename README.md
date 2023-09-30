@@ -1,2 +1,3 @@
-# etch-a-sketch
-Etch A Sketch
+# Etch A Sketch
+
+Simple sketch application written with pure HTML/CSS/JS.
