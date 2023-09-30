@@ -1,0 +1,16 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+}
