@@ -33,3 +33,5 @@ function changeBoxSize() {
 function fillBox(event) {
   event.target.style.backgroundColor = "black";
 }
+
+addBoxes(16);
