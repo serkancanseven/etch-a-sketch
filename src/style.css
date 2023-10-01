@@ -1,6 +1,6 @@
 @font-face {
   font-family: Etchy;
-  src: url("../assets/font/etchy.otf");
+  src: url("./../assets/font/etchy.otf");
 }
 
 html {
@@ -18,7 +18,7 @@ html {
 }
 
 .sketch {
-  background-image: url("../assets/img/sketch.jpg");
+  background-image: url("./../assets/img/sketch.jpg");
   background-repeat: no-repeat;
   width: 960px;
   height: 801px;
