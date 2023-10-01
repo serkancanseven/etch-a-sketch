@@ -10,7 +10,7 @@ function addBoxes(boxCount) {
       const div = document.createElement("div");
       div.style.width = boxSize;
       div.style.height = boxSize;
-      div.style.border = "1px solid gray";
+      div.style.border = "1px solid #9C9EA075";
       container.appendChild(div);
       div.addEventListener("mouseenter", (e) => fillBox(e));
     }
@@ -30,7 +30,7 @@ function changeBoxSize() {
 }
 
 function fillBox(event) {
-  event.target.style.backgroundColor = "black";
+  event.target.style.backgroundColor = "#6A6F72";
 }
 
 addBoxes(16);

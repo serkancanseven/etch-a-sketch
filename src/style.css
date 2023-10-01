@@ -33,12 +33,12 @@ html {
   display: flex;
   flex-wrap: wrap;
   max-width: 466px;
-  border: 1px solid gray;
 }
 
 .change {
   margin: auto;
   color: gold;
+  cursor: pointer;
   font-size: 42px;
   font-family: Etchy, sans-serif;
   text-decoration: none;
