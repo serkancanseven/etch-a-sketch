@@ -1,11 +1,10 @@
+const boardSize = 464;
 const container = document.querySelector(".container");
-const boardSize = 720;
 const button = document.querySelector(".change");
 button.addEventListener("click", changeBoxSize);
 
 function addBoxes(boxCount) {
   const boxSize = boardSize / boxCount + "px";
-
   for (let i = 0; i < boxCount; i++) {
     for (let j = 0; j < boxCount; j++) {
       const div = document.createElement("div");
