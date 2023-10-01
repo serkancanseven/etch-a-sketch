@@ -26,7 +26,7 @@ function changeBoxSize() {
   if (container.firstElementChild) {
     container.replaceChildren();
   }
-  addBoxes(boxCount);
+  addBoxes(boxCount || 16);
 }
 
 function fillBox(event) {
