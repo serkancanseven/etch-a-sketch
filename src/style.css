@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Etchy;
+  src: url("../assets/font/etchy.otf");
+}
+
 html {
   height: 100vh;
   display: flex;
@@ -12,11 +17,34 @@ html {
   box-sizing: inherit;
 }
 
-.container {
+.sketch {
+  background-image: url("../assets/img/sketch.jpg");
+  background-repeat: no-repeat;
+  width: 960px;
+  height: 801px;
   margin: auto;
   display: flex;
-  height: inherit;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 157px;
+  display: flex;
   flex-wrap: wrap;
-  max-width: 722px;
+  max-width: 466px;
   border: 1px solid gray;
+}
+
+.change {
+  margin: auto;
+  color: gold;
+  font-size: 42px;
+  font-family: Etchy, sans-serif;
+  text-decoration: none;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.change:hover {
+  text-decoration: underline;
 }
