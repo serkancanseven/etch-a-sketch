@@ -1,36 +1,47 @@
-const boardSize = 464;
+const BOARD_SIZE = 464;
+const DEFAULT_BOX_COUNT = 16;
+const BORDER_COLOR = "#9C9EA075";
+const FILL_COLOR = "#6A6F72";
+
 const container = document.querySelector(".container");
 const button = document.querySelector(".change");
 button.addEventListener("click", changeBoxSize);
 
+function createBox(size) {
+  const div = document.createElement("div");
+  div.style.width = size;
+  div.style.height = size;
+  div.style.border = `1px solid ${BORDER_COLOR}`;
+  div.addEventListener("mouseenter", fillBox);
+  return div;
+}
+
 function addBoxes(boxCount) {
-  const boxSize = boardSize / boxCount + "px";
+  const boxSize = BOARD_SIZE / boxCount + "px";
   for (let i = 0; i < boxCount; i++) {
     for (let j = 0; j < boxCount; j++) {
-      const div = document.createElement("div");
-      div.style.width = boxSize;
-      div.style.height = boxSize;
-      div.style.border = "1px solid #9C9EA075";
+      const div = createBox(boxSize);
       container.appendChild(div);
-      div.addEventListener("mouseenter", (e) => fillBox(e));
     }
   }
 }
 
 function changeBoxSize() {
-  let boxCount = +prompt("How many boxes do you want?");
-  if (boxCount > 64) {
-    alert("You may only enter a number up to 64!");
-    boxCount = +prompt("How many boxes do you want?");
+  let boxCount = +prompt("Enter the number of boxes (up to 64):");
+  if (isNaN(boxCount) || boxCount <= 0 || boxCount > 64) {
+    alert("Please enter a number between 1 and 64.");
+    return;
   }
-  if (container.firstElementChild) {
-    container.replaceChildren();
-  }
-  addBoxes(boxCount || 16);
+  clearContainer();
+  addBoxes(boxCount);
+}
+
+function clearContainer() {
+  container.innerHTML = "";
 }
 
 function fillBox(event) {
-  event.target.style.backgroundColor = "#6A6F72";
+  event.target.style.backgroundColor = FILL_COLOR;
 }
 
-addBoxes(16);
+addBoxes(DEFAULT_BOX_COUNT);
